@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/submitForm"
+        android:layout_width="207dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="-50dp"
+        android:onClick="onSubmitForm"
+        android:text="Submit form"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitName"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/submitName"
+        android:layout_width="339dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Enter your name and surname"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameSurname" />
+
+    <TextView
+        android:id="@+id/nameSurname"
+        android:layout_width="377dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:background="#4962EA"
+        android:fontFamily="sans-serif"
+        android:text="What is your name?"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/phoneNumber"
+        android:layout_width="377dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:background="#4962EA"
+        android:fontFamily="sans-serif"
+        android:text="What is your phone number?"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitName" />
+
+    <EditText
+        android:id="@+id/submitPhoneNumber"
+        android:layout_width="339dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="220dp"
+        android:ems="10"
+        android:hint="Enter phone number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/submitForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="377dp"
+        android:layout_height="51dp"
+        android:background="#4962EA"
+        android:fontFamily="sans-serif"
+        android:text="Where do you come from?"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/submitForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitPhoneNumber"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <AutoCompleteTextView
+        android:id="@+id/submitCity"
+        android:layout_width="339dp"
+        android:layout_height="57dp"
+        android:completionThreshold="1"
+        android:dropDownAnchor="@+id/city"
+        android:dropDownWidth="wrap_content"
+        android:dropDownHeight="wrap_content"
+        android:hint=" Enter city name"
+        android:imeOptions="actionSearch"
+        android:inputType="textAutoComplete"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/submitForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/city"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
